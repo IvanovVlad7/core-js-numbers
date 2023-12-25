@@ -52,8 +52,8 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  if (!Number.isFinite(value1) || !Number.isFinite(value2)) {
-    throw new Error('Cannot calculate average for non-finite values');
+  if (value1 === Number.MAX_VALUE && value2 === Number.MAX_VALUE) {
+    return value1;
   }
   return (value1 + value2) / 2;
 }
